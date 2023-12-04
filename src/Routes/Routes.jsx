@@ -55,9 +55,9 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path:'contact',
-        element:<Contact></Contact>
-      }
+        path: "contact",
+        element: <Contact></Contact>,
+      },
     ],
   },
   {
@@ -117,7 +117,9 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/book/${params.id}`),
+          fetch(
+            `https://cp-shop.vercel.app/book/${params.id}`
+          ),
       },
       {
         path: "users",
